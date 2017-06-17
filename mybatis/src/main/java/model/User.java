@@ -1,5 +1,7 @@
 package model;
 
+import com.google.common.base.MoreObjects;
+
 import java.util.Date;
 
 /**
@@ -54,6 +56,6 @@ public class User {
 
     @Override
     public String toString() {
-        return this.id+"|"+this.username+"|"+this.birthday+"|"+this.sex+"|"+this.address;
+        return MoreObjects.toStringHelper(this).add("id",id).add("username",username).add("address",address).toString();
     }
 }

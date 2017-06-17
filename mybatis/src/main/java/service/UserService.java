@@ -25,7 +25,6 @@ public class UserService {
 
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        sqlSession.getMapper(null);
         return sqlSession;
     }
 
@@ -35,7 +34,7 @@ public class UserService {
     public void findUserByIdTest() throws IOException {
         SqlSession sqlSession = createSession();
         try {
-            User result =(User) sqlSession.selectOne("findUserById", 334);
+            User result =(User) sqlSession.selectOne("test.findUserById", 334);
             System.out.println(result);
         }finally {
             sqlSession.close();
