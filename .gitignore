@@ -2,4 +2,5 @@
 testignore/*
 *.iml
 /mybatis/target/
+/zookeeper/target/
 
